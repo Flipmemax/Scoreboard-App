@@ -4,7 +4,7 @@ import "./Scoreboard.scss";
 export default function AddPlayerForm(props) {
   const [name, setName] = useState("");
 
-  const handleSubmit = (event) => {
+  const submitHandle = (event) => {
     event.preventDefault();
     if (!name) {
       alert("Please provide a name");
@@ -17,7 +17,7 @@ export default function AddPlayerForm(props) {
 
   return (
     <div className="AddPlayerForm">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={submitHandle}>
         <p>
           New player:{" "}
           <input

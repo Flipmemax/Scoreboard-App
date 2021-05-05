@@ -4,12 +4,12 @@ import AddPlayerForm from "./AddPlayerForm";
 import Player from "./Player";
 import Title from "./Title";
 
-function compareScore(playera, playerb) {
-  return playerb.score - playera.score;
+function compareScore(playerA, playerB) {
+  return playerB.score - playerA.score;
 }
 
-function compareName(nameplayera, nameplayerb) {
-  return nameplayera.name.localeCompare(nameplayerb.name);
+function compareName(nameplayerA, nameplayerB) {
+  return nameplayerA.name.localeCompare(nameplayerB.name);
 }
 
 export default function Scoreboard() {
