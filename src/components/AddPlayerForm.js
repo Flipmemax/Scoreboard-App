@@ -10,6 +10,10 @@ export default function AddPlayerForm(props) {
       alert("Please provide a name");
       return;
     }
+    if (name.length <= 1) {
+      alert("Please provide a longer name");
+      return;
+    }
 
     props.addPlayer(name);
     setName("");
