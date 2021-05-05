@@ -69,6 +69,10 @@ export default function Scoreboard() {
     console.log(...players);
   };
 
+  const clearPlayers = () => {
+    setPlayers([]);
+  };
+
   return (
     <div>
       <Title title="Only One Can Win!" />
@@ -85,6 +89,9 @@ export default function Scoreboard() {
       <button onClick={randomScore} className="ScoreBoardButton">
         Random Score
       </button>
+      <button onClick={clearPlayers} className="ClearPlayersButton">
+        Clear Players
+      </button>
       <p>Player's scores:</p>
 
       {sortedPlayers.map((player) => {
@@ -96,6 +103,7 @@ export default function Scoreboard() {
             score={player.score}
             incrementScore={incrementScore}
             reduceScore={reduceScore}
+            clearPlayers={clearPlayers}
           />
         );
       })}
