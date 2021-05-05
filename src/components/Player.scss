@@ -18,11 +18,10 @@
     background: rgb(29, 204, 23);
     background: linear-gradient(90deg, rgb(117, 175, 29), greenyellow);
     transition: all 0.2s ease;
-  }
-
-  &:hover .percentage_coloring {
-    transform: scale(1, 2);
-    background: linear-gradient(90deg, #78bbe7, #0f79f2);
+    &:hover {
+      transform: scale(1, 2);
+      background: linear-gradient(90deg, #78bbe7, #0f79f2);
+    }
   }
 
   button {
