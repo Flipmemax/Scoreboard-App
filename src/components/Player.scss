@@ -44,9 +44,8 @@
     color: rgb(53, 52, 52);
 
     &:hover {
-      background: #78bbe7;
+      background: #23920d;
     }
-    z-index: 2;
   }
 
   .ReduceButton {
@@ -64,12 +63,11 @@
 
     transition: all 0.2s ease;
 
-    background: greenyellow;
+    background: rgb(255, 95, 47);
     color: rgb(53, 52, 52);
 
     &:hover {
-      background: #78bbe7;
+      background: #e00808;
     }
-    z-index: 1;
   }
 }

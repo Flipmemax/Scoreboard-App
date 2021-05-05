@@ -1,7 +1,17 @@
 import { useState } from "react";
+import "./Scoreboard.scss";
 
 export default function AddPlayerForm(props) {
-  const [name, setName] = useState(" ");
+  const [name, setName] = useState("");
+
+  const addPlayer = () => {
+    if (!name) {
+      alert("Please provide a name");
+      return;
+    }
+    props.addPlayer(name);
+    setName("");
+  };
 
   return (
     <div className="AddPlayerForm">
@@ -15,13 +25,7 @@ export default function AddPlayerForm(props) {
             setName(event.target.value);
           }}
         />{" "}
-        <button
-          onClick={() => {
-            setName(name);
-            props.addPlayer(name);
-            setName(" ");
-          }}
-        >
+        <button onClick={addPlayer} className="ScoreBoardButton">
           Add
         </button>
       </p>
