@@ -4,7 +4,8 @@ import "./Scoreboard.scss";
 export default function AddPlayerForm(props) {
   const [name, setName] = useState("");
 
-  const addPlayer = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (!name) {
       alert("Please provide a name");
       return;
@@ -15,20 +16,20 @@ export default function AddPlayerForm(props) {
 
   return (
     <div className="AddPlayerForm">
-      <p>
-        New player:{" "}
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(event) => {
-            setName(event.target.value);
-          }}
-        />{" "}
-        <button onClick={addPlayer} className="ScoreBoardButton">
-          Add
-        </button>
-      </p>
+      <form onSubmit={handleSubmit}>
+        <p>
+          New player:{" "}
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />{" "}
+          <button className="ScoreBoardButton">Add Player</button>
+        </p>
+      </form>
     </div>
   );
 }

@@ -57,16 +57,19 @@ export default function Scoreboard() {
   };
 
   const randomScore = () => {
-    const newPlayers = players.map((player) => ({
+    const newScore = players.map((player) => ({
       ...player,
       score: Math.floor(Math.random() * 100),
     }));
-    setPlayers(newPlayers);
+    setPlayers(newScore);
   };
 
   const addPlayer = (name) => {
-    setPlayers([...players, { id: players.length + 1, name, score: 0 }]);
-    console.log(...players);
+    const newPlayer = { id: players.length + 1, name: name, score: 0 };
+    // setPlayers([...players, { id: players.length + 1, name, score: 0 }]);
+    const newArray = [...players, newPlayer];
+
+    setPlayers(newArray);
   };
 
   const clearPlayers = () => {
