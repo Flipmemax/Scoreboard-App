@@ -1,0 +1,75 @@
+@import "../style/config";
+
+.Player {
+  display: block;
+  background: rgb(228, 248, 197);
+  position: relative;
+
+  p {
+    margin: 0;
+    padding: 0.3rem 0.7rem 0.7rem;
+  }
+
+  .percentage_coloring {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.5rem;
+    background: rgb(29, 204, 23);
+    background: linear-gradient(90deg, rgb(117, 175, 29), greenyellow);
+    transition: all 0.2s ease;
+  }
+
+  &:hover .percentage_coloring {
+    transform: scale(1, 2);
+    background: linear-gradient(90deg, #78bbe7, #0f79f2);
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: 70px;
+
+    border: 2px solid black;
+    background: transparent;
+    font-family: inherit;
+    font-size: initial;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    background: greenyellow;
+    color: rgb(53, 52, 52);
+
+    &:hover {
+      background: #78bbe7;
+    }
+    z-index: 2;
+  }
+
+  .ReduceButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: 0px;
+
+    border: 2px solid black;
+    background: transparent;
+    font-family: inherit;
+    font-size: initial;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    background: greenyellow;
+    color: rgb(53, 52, 52);
+
+    &:hover {
+      background: #78bbe7;
+    }
+    z-index: 1;
+  }
+}

@@ -1,0 +1,29 @@
+.Scoreboard {
+  ul {
+    display: block;
+    position: absolute;
+    padding: 0;
+  }
+}
+
+.ScoreBoardButton {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  background: transparent;
+  font-family: inherit;
+  font-size: initial;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  background: linear-gradient(90deg, #c6e778, #0ff248);
+  color: rgb(53, 52, 52);
+
+  &:hover {
+    background: linear-gradient(90deg, #78bbe7, #0f79f2);
+  }
+}

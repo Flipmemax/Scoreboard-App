@@ -1,0 +1,40 @@
+@import "./style/config";
+
+html,
+body {
+  color: black;
+  font-family: "Alatsi", serif;
+  font-size: 18px; // the "base size" = 1rem
+  line-height: 140%;
+
+  // resets
+  margin: 0;
+  padding: 0;
+  background-color: rgb(196, 196, 196);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 (3 * $vertical-space) 0;
+}
+
+p,
+ul,
+ol,
+li {
+  // vertical rhythm defined by bottom margins
+  margin: 0 0 $vertical-space 0;
+}
+
+.App {
+  // to center the app in the middle of the page
+  max-width: 40rem;
+  margin: 0 auto;
+
+  // but add some spacing above
+  margin-top: 2rem;
+
+  // horizontal (internal) spacing
+  padding: 0 1rem;
+}
