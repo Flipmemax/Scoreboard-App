@@ -22,7 +22,6 @@ export default function Scoreboard() {
   );
 
   const changeSorting = (event) => {
-    console.log("new sort order:", event.target.value);
     setSortBy(event.target.value);
   };
 

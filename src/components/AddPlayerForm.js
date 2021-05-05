@@ -10,6 +10,7 @@ export default function AddPlayerForm(props) {
       alert("Please provide a name");
       return;
     }
+
     props.addPlayer(name);
     setName("");
   };
